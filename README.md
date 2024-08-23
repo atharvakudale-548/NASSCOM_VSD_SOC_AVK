@@ -209,11 +209,27 @@ Steps: </p>
 ### **Day 3 : Design Library Cell using magic layout and ngspice characterization**</p>
 #### D3_SK1 CMOS Inverter ngspice simulations </p>
 ##### D3_SK1_L0 -- **IO Placer Revision** </p>
+Run the command </p>
+`set ::env(FP_IO_MODE) 2` </p>
+![Screenshot (303)](https://github.com/user-attachments/assets/05417dbe-5ec8-4c1b-b2e5-a586bb1568d0) </p>
+![image](https://github.com/user-attachments/assets/e2b69809-5294-4b33-9757-5a7373382d48) </p>
 ##### D3_SK1_L1 -- **Spice deck creation for CMOS Inverter** </p>
+- Connectivity information about the netlist</p>
+- Component values</p>
+- Pmos should be wider than nmos</p>
+- identify and 'name' the nodes</p>
+![Screenshot (178)](https://github.com/user-attachments/assets/bfb1efa8-d862-46ad-b0b7-63ad1cf3883f) </p>
+![Screenshot (179)](https://github.com/user-attachments/assets/09cc2abc-88e8-4106-8681-b85074467147)</p>
+![Screenshot (180)](https://github.com/user-attachments/assets/a23f8711-e94c-4d26-883e-16ab303776ba)</p>
+![Screenshot (181)](https://github.com/user-attachments/assets/21a8a41f-1011-488c-bc76-f388c2d3b32f)</p>
 ##### D3_SK1_L2 -- **Spice Simulation** </p>
+![Screenshot (185)](https://github.com/user-attachments/assets/6c3da8b7-3c9f-446d-bf4d-235c06328b1e)</p>
 ##### D3_SK1_L3 -- **Switching Threshold Vm** </p>
+![Screenshot (188)](https://github.com/user-attachments/assets/827b0238-0e2c-4528-933e-158139be3b80) </p>
 ##### D3_SK1_L4 -- **Static and Dynamic Simulation** </p>
+![Screenshot (190)](https://github.com/user-attachments/assets/a8d9240d-e6c0-4b7c-8a1a-2e027454ba5f)</p>
 ##### D3_SK1_L5 -- **Lab steps to gitclone vsdstdcelldesign** </p>
+
 #### D3_SK2 Inception of Layout CMOS fab process </p>
 ##### D3_SK2_L1 -- **Create Active Regions** </p>
 ##### D3_SK2_L2 -- **N- well and P-well** </p>
