@@ -3,7 +3,7 @@
 ## Contents
 ### **Day 1 : Inception of open-source EDA OpenLANE and sky130 PDK **</p>
 D1_SK1 How to talk to computers </p>
-D1_SKY_L1 -- QFN - 48 Package chips </p>
+D1_SKY_L1 -- **QFN - 48 Package chips** </p>
 **Processor/SOC**
 ![Screenshot (63)](https://github.com/user-attachments/assets/7a39c1e8-2c63-42d7-991c-f0a715972bd7) </p>
 - The above image represent the overall viw of SoC and what are the various components included in it like . A SOC is s an integrated circuit that integrates most or all components of a computer or other electronic system. </p>
@@ -29,6 +29,6 @@ The chip is in the center. </p>
 - Macros are designs that are frequently used in circuit design. </p>
 7. **IO Pads** </p>
 - IO pads are a way of communication between the core and the outside world. </p>
-D1_SKY_L2 -- Introduction to RISC -V </p>
+D1_SKY_L2 **-- Introduction to RISC -V** </p>
 ISA - Instruction Set Architecture . As we know computers only understand binary numbers. But we as humans are aware of writing high level programming languages such as C , C++,Python ,etc. In this process, RISC -V Implementation is done and then transfered to machine level. Bits get executed to layout . HDL is way to interact with RISC-V and layout design. </p>
 ![Screenshot (75)](https://github.com/user-attachments/assets/92e42112-580c-4364-8a93-436fd6922805) </p>
