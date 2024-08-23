@@ -29,3 +29,6 @@ The chip is in the center. </p>
 - Macros are designs that are frequently used in circuit design. </p>
 7. **IO Pads** </p>
 - IO pads are a way of communication between the core and the outside world. </p>
+D1_SKY_L2 -- Introduction to RISC -V </p>
+ISA - Instruction Set Architecture . As we know computers only understand binary numbers. But we as humans are aware of writing high level programming languages such as C , C++,Python ,etc. In this process, RISC -V Implementation is done and then transfered to machine level. Bits get executed to layout . HDL is way to interact with RISC-V and layout design. </p>
+![Screenshot (75)](https://github.com/user-attachments/assets/92e42112-580c-4364-8a93-436fd6922805) </p>
