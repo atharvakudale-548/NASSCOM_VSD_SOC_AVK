@@ -177,12 +177,35 @@ RePlAce integrates both global and detailed placement stages, with an emphasis o
 ![Screenshot (302)](https://github.com/user-attachments/assets/1a3fdd89-616b-4cb9-987d-ee7bf8ecb94d) </p>
 #### D2_SK3 **Cell Design and Characterization flows** </p>
 ##### D2_SK3_L1 -- **Inputs for Cell Design Flow** </p>
+Standard cells are present in the library . Library consists of cells of different functionality,sizes and thresholds . </p>
+![Screenshot (161)](https://github.com/user-attachments/assets/d0ff23ae-5a12-45f5-ab45-031a7d7d20d4) </p>
+![Screenshot (164)](https://github.com/user-attachments/assets/42730800-bdba-420d-b3c0-5fb14c3b1030) </p>
 ##### D2_SK3_L2 -- **Circuit Design Steps** </p>
+![Screenshot (164)](https://github.com/user-attachments/assets/99e2694d-912c-4657-8206-a3d19daea1d4) </p>
 ##### D2_SK3_L3 -- **Layout Design** </p>
+![Screenshot (165)](https://github.com/user-attachments/assets/1a15e991-f842-40a0-ae20-ac5d6ea5e829) </p>
+![Screenshot (165)](https://github.com/user-attachments/assets/b601ddb4-0c9d-4720-a4b7-138bb6ced601) </p>
 ##### D2_SK3_L4 -- **Characterization** </p>
+- Steps in Characterization Flow </p>
+Steps: </p>
+1. Read in the modules files </p>
+2. Read the extract spiece Netlist</p>
+3. Define the Behaviour of Buffer</p>
+4. Read Sub ckt of Buffers</p>
+5. Attach the power sources</p>
+6. Apply the stimulus</p>
+7. Necessary Output Capacitance</p>
+8. Provide the necessary stimulus command</p>
+9. Guna software</p>
+![Screenshot (169)](https://github.com/user-attachments/assets/39ee8ae5-5a99-4382-b2cb-f8b3d0e23199) </p>
 #### D2_SK4 **Timing Characterization** </p>
 ##### D2_SK4_L1 -- **Timing Threshold Definition** </p>
+![Screenshot (170)](https://github.com/user-attachments/assets/b6349549-3415-4b10-9ec0-ccdf003700fa) </p>
+![Screenshot (174)](https://github.com/user-attachments/assets/d919983b-e8bc-4711-8871-da808f40b805) </p>
 ##### D2_SK4_L2 -- **Propagation Delay and Transition Time** </p>
+![Screenshot (175)](https://github.com/user-attachments/assets/c584a6a6-79f2-4ab2-8f80-25afffd21aa3) </p>
+![Screenshot (176)](https://github.com/user-attachments/assets/27146e42-693f-411a-bdcf-93637a30deae) </p>
+
 ### **Day 3 : Design Library Cell using magic layout and ngspice characterization**</p>
 #### D3_SK1 CMOS Inverter ngspice simulations </p>
 ##### D3_SK1_L0 -- **IO Placer Revision** </p>
