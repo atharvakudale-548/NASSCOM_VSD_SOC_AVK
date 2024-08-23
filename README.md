@@ -275,7 +275,7 @@ Calculate rise time and fall time </p>
 `magic -d XR &`</p>
 - in tkcon window</p>
 `paint v2`</p>
-cif see VIA2`</p>
+`cif see VIA2`</p>
 ![Screenshot (309)](https://github.com/user-attachments/assets/0cc90eab-0ccf-44a1-b62a-bde2cfa1443a)</p>
 ![Screenshot (311)](https://github.com/user-attachments/assets/056843a7-f2e3-43cb-8b26-0beaedc8081e)</p>
 ![Screenshot (312)](https://github.com/user-attachments/assets/704ecd98-d076-4e03-8061-ec29790a024f)</p>
