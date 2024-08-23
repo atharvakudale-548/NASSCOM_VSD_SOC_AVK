@@ -85,7 +85,7 @@ Complete RTL2GDS withou manual interaction </p>
 ##### D1_SKY_L2 **Design Preperation Step** </p>
 - Lab for running synthesis </p>
 `cd Desktop` </p>
-`cd work/tools/openlane_working_dir' </p>
+`cd work/tools/openlane_working_dir` </p>
 `cd openlane` </p>
 `docker` </p>
 `./flow.tcl -interactive` </p>
