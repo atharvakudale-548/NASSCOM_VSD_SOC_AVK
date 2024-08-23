@@ -48,3 +48,34 @@ Electronic design automation (EDA), also referred to as electronic computer-aide
 Process Design Kits are the interface between the Fabrication companies and the designers. They seperate the design from the technology. </p>
 4. **Google Skywater 130nm PDK** </p>
 The Google SkyWater 130nm PDK is an open-source Process Design Kit (PDK) provided by SkyWater Technology Foundry in collaboration with Google. </p>
+![Screenshot (93)](https://github.com/user-attachments/assets/072e6fb3-f18a-4531-9f26-2eb910e71d2a) </p>
+![Screenshot (95)](https://github.com/user-attachments/assets/83a0c4af-df6e-49a3-a043-01d37ceeee0c) </p>
+##### D1_SKY_L2 **RTL2GDS Flow** </p>
+![Screenshot (98)](https://github.com/user-attachments/assets/8255db07-6dbd-44b3-b55a-460e935b6e44) </p>
+![Screenshot (99)](https://github.com/user-attachments/assets/887229ca-2a83-43d2-b48e-edea26e200f3) </p>
+![Screenshot (103)](https://github.com/user-attachments/assets/13272a78-3c5e-4a93-b568-6223709da959) </p>
+![Screenshot (105)](https://github.com/user-attachments/assets/40b40a0e-cc07-41b3-8060-d903e5905547) </p>
+![Screenshot (106)](https://github.com/user-attachments/assets/d9cc1ddf-58cd-4569-8162-cf157ac56a0a) </p>
+![Screenshot (107)](https://github.com/user-attachments/assets/3cdde963-6a70-4e0e-975e-67c9210e5fc8) </p>
+![Screenshot (108)](https://github.com/user-attachments/assets/e28ec162-5d20-4e55-9d63-b2bee718aa36) </p>
+![Screenshot (109)](https://github.com/user-attachments/assets/3508af2c-94c0-4e3d-b54f-347464d9b83a) </p>
+![Screenshot (110)](https://github.com/user-attachments/assets/31d922ed-bd63-4ac2-ba31-0b8c9336eb6a) </p>
+![Screenshot (111)](https://github.com/user-attachments/assets/d053414a-fd29-4d71-8d85-dd8a43e2c3f9) </p>
+1. RTL - RTL is an implementation of digital circuits using Verilog </p>
+2. Synthesis - It is used to convert RTL implementation into gate level netlistwith the help of a standard cell lobrary. </p>
+3. Floor/Power Planning - It is the arrangement of different blocks and elements for minimizing the area for the peripherals and the IO pads.Power planning is used for the efficient power distribution throughtout the chip. </p>
+4. Place - It is performed in two stages a) Global Placement - where optimal position is done and b) Detailed Placement - SC are minimally altered . </p>
+5. Clock Tree Synthesis - It verifies the clock signal has the connection made across the whole chip. It is used to minimize clock skew, latency. </p>
+6. Routing - Connects the placed standard cells with metal wires, creating the final layout. </p>
+7. Sign-off - Once routing is done , the chip undergoes verification steps like Timing Verifications (DRC and LVS) and STA for timing verifications. </p>
+##### D1_SKY_L3 **OpenLANE and Strive Chipsets** </p>
+![Screenshot (112)](https://github.com/user-attachments/assets/6096693e-c2d3-458d-b741-68895f061134) </p>
+![Screenshot (113)](https://github.com/user-attachments/assets/3c419348-5b8b-4e77-83e1-da62448df61e) </p>
+- OpenLane is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, KLayout and a number of custom scripts for design exploration and optimization. The flow performs all ASIC implementation steps from RTL all the way down to GDSII. </p>
+- In efabless , the company has a SoC called Strive.They have various versions and contains several features. </p>
+##### D1_SKY_L3 **OpenLANE ASIC Flow** </p>
+![image](https://github.com/user-attachments/assets/2234c8c8-d865-4a5e-adec-fffc8d953858) </p>
+#### D1_SK3 EDA Tools </p>
+##### D1_SKY_L3 **OpenLANE Directory Structure** </p>
+Complete RTL2GDS withou manual interaction </p>
+
