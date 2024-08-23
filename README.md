@@ -2,8 +2,8 @@
 ###  2 Weeks Course ORGANIZED BY VSD IN ASSOCIATION WITH NASSCOM</p>
 ## Contents
 ### **Day 1 : Inception of open-source EDA OpenLANE and sky130 PDK **</p>
-D1_SK1 How to talk to computers </p>
-D1_SKY_L1 -- **QFN - 48 Package chips** </p>
+#### D1_SK1 How to talk to computers </p>
+##### D1_SKY_L1 -- **QFN - 48 Package chips** </p>
 **Processor/SOC**
 ![Screenshot (63)](https://github.com/user-attachments/assets/7a39c1e8-2c63-42d7-991c-f0a715972bd7) </p>
 - The above image represent the overall viw of SoC and what are the various components included in it like . A SOC is s an integrated circuit that integrates most or all components of a computer or other electronic system. </p>
@@ -29,6 +29,12 @@ The chip is in the center. </p>
 - Macros are designs that are frequently used in circuit design. </p>
 7. **IO Pads** </p>
 - IO pads are a way of communication between the core and the outside world. </p>
-D1_SKY_L2 **-- Introduction to RISC -V** </p>
+##### D1_SKY_L2 **-- Introduction to RISC -V** </p>
 ISA - Instruction Set Architecture . As we know computers only understand binary numbers. But we as humans are aware of writing high level programming languages such as C , C++,Python ,etc. In this process, RISC -V Implementation is done and then transfered to machine level. Bits get executed to layout . HDL is way to interact with RISC-V and layout design. </p>
 ![Screenshot (75)](https://github.com/user-attachments/assets/92e42112-580c-4364-8a93-436fd6922805) </p>
+##### D1_SKY_L3 **From Software Applications to Hardware** </p>
+When a use any application , there are many functions and features that we encounter. There is not a direct path between the software and the hardware , it goes through various stages before interacting with the hardware. </p>
+![Screenshot (81)](https://github.com/user-attachments/assets/c1bfa400-4408-4b5d-9e1b-8d083fd0c27c) </p>
+- Operating System OS : The task of OS is to convert the general tasks and various I/O operations into high level language like C,C++ </p>
+- Compiler - Compiler converts the C/C++ code into instructions in the form of *.exe file </p>
+- Assembler - The job of assembler is to covert instructions tinto binary which is then fed to hardware and it generates the output. </p>
