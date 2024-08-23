@@ -139,10 +139,70 @@ The connectivity information between the gates is coded using VHDL/Verilog langu
 The frontend team who decides the netlist connectivity input and output and the backend team who done the pin placements. So according to the pin placements, we have to locate the preplaced blocks nearer to the inputs of the preplaced blocks. </p>
 ![Screenshot (152)](https://github.com/user-attachments/assets/bd1aa354-5767-4609-8057-149901291f70) </p>
 ##### D2_SK1_L6 -- **Steps to Run Floorplan using OpenLANE** </p>
-
-
-
-
-
-
-
+- Run the floorplan </p>
+Using the docker method run the following command </p>
+`run_Floorplan` </p>
+![Screenshot (294)](https://github.com/user-attachments/assets/1962a08c-05c6-4be5-ab68-b74b38e3d5d6) </p>
+![Screenshot (295)](https://github.com/user-attachments/assets/ceb3d40b-0aaf-403b-824e-005265323c90) </p>
+`openlane/configuration$pwd`</p>
+`openlane/configuration$ls -ltr` </p>
+`openlane/configuration$less README.md` </p>
+`openlane/configuration$less floorplan.tcl` </p>
+##### D2_SK1_L7 -- **Review Floorplan files and steps to view** </p>
+![Screenshot (296)](https://github.com/user-attachments/assets/79d24d13-a25d-4a5b-a3bf-214de795b960) </p>
+##### D2_SK1_L8 -- **Review Floorplan files and steps to view** </p>
+![Screenshot (297)](https://github.com/user-attachments/assets/2905201c-f070-4e7a-ba03-e893d0596568) </p>
+![Screenshot (298)](https://github.com/user-attachments/assets/91475fb1-6788-4b01-bebe-eb355ec885cc)</p>
+#### D2_SK2 Library binding and placement </p>
+##### D2_SK2_L1 -- **Netlist binding and initial place design** </p>
+- All are available in library with timing , width and heights conditions . </p>
+- Big shape for lesser resistance </p>
+-A Library in the context of integrated circuit (IC) design refers to a collection of pre-designed, pre-characterized components (cells) that are used during various stages of the design process </p>
+![Screenshot (155)](https://github.com/user-attachments/assets/48bfb3c8-11b8-41c0-bbdc-4e0cfd134693) </p>
+##### D2_SK2_L2 -- **Optimize placement using estimated wirelength and capacitence** </p>
+In this stage , optimization of placement is done .</p>
+It is very improtant and difficult step to find a proper placement between two elements .
+##### D2_SK2_L3 -- **Ideal final clock is 0** </p>
+##### D2_SK2_L4 -- **Need for libraries and characterization** </p>
+**Congestion-aware placement using RePlAce** </p>
+Global Placement: Initial rough positioning of cells with a focus on managing congestion.</p>
+Detailed Placement: Fine-tuning of cell positions to optimize local routing and meet design constraints.</p>
+RePlAce integrates both global and detailed placement stages, with an emphasis on managing and reducing congestion throughout the placement process.</p>
+`run_placement` </p>
+![Screenshot (300)](https://github.com/user-attachments/assets/e8a97204-8abe-44bd-a7b9-027cc881432e) </p>
+- Load placement.def in magic layout </p>
+`cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/29-07_10-25/results/placement/` </p>
+`magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &` </p>
+![Screenshot (301)](https://github.com/user-attachments/assets/cc7a71eb-1593-4f5c-b3ee-19184ffa5e9f) </p>
+![Screenshot (302)](https://github.com/user-attachments/assets/1a3fdd89-616b-4cb9-987d-ee7bf8ecb94d) </p>
+#### D2_SK3 **Cell Design and Characterization flows** </p>
+##### D2_SK3_L1 -- **Inputs for Cell Design Flow** </p>
+##### D2_SK3_L2 -- **Circuit Design Steps** </p>
+##### D2_SK3_L3 -- **Layout Design** </p>
+##### D2_SK3_L4 -- **Characterization** </p>
+#### D2_SK4 **Timing Characterization** </p>
+##### D2_SK4_L1 -- **Timing Threshold Definition** </p>
+##### D2_SK4_L2 -- **Propagation Delay and Transition Time** </p>
+### **Day 3 : Design Library Cell using magic layout and ngspice characterization**</p>
+#### D3_SK1 CMOS Inverter ngspice simulations </p>
+##### D3_SK1_L0 -- **IO Placer Revision** </p>
+##### D3_SK1_L1 -- **Spice deck creation for CMOS Inverter** </p>
+##### D3_SK1_L2 -- **Spice Simulation** </p>
+##### D3_SK1_L3 -- **Switching Threshold Vm** </p>
+##### D3_SK1_L4 -- **Static and Dynamic Simulation** </p>
+##### D3_SK1_L5 -- **Lab steps to gitclone vsdstdcelldesign** </p>
+#### D3_SK2 Inception of Layout CMOS fab process </p>
+##### D3_SK2_L1 -- **Create Active Regions** </p>
+##### D3_SK2_L2 -- **N- well and P-well** </p>
+##### D3_SK2_L3 -- **Create Gate Terminal** </p>
+##### D3_SK2_L4 -- **LDD Formation** </p>
+##### D3_SK2_L5 -- **Source and Drain** </p>
+##### D3_SK2_L6 -- **Local Interconnect** </p>
+##### D3_SK2_L7 -- **Higher level metal formation** </p>
+##### D3_SK2_L8 -- **Lab intro to SKY130 basic layers layout and LEP using inverter** </p>
+##### D3_SK2_L9 -- **Lab steps to create std cell layout and extract spice netlist** </p>
+#### D3_SK3 SKY130 Tech File Labs </p>
+##### D3_SK3_L1**Lab steps to create final spice deck using SKY130 tech** </p>
+##### D3_SK3_L3**Magic tool options and DRC** </p>
+##### D3_SK3_L4**SKY130 pdks and steps to download labs** </p>
+##### D3_SK3_L5**Magic tool options and DRC** </p>
