@@ -95,5 +95,54 @@ Complete RTL2GDS withou manual interaction </p>
 ![Screenshot (127)](https://github.com/user-attachments/assets/4bbe524e-a45c-4e9e-9823-a845e170c8b4) </p>
 ![Screenshot (128)](https://github.com/user-attachments/assets/5c2798ba-dbeb-4e81-8433-5ad5c554f7e9) </p>
 ![Screenshot (130)](https://github.com/user-attachments/assets/21ced0a8-03fd-407d-9961-a68a5b9e2f1a) </p>
+![Screenshot (292)](https://github.com/user-attachments/assets/ef04f268-0fe2-4396-aed0-a2b11e7b658c) </p>
+- Flop Ratio = Number of D Flip Flops / Number of Cells </p>
+`Flop Ratio = 1613/14876 = 0.1084` </p>
+i.e. 10.84% </p>
+### **Day 2 : Good vs Bad Floorplan and Library Cells** </p>
+#### D2_SK1 Chip Floor Planning Considerations </p>
+##### D2_SK1_L1 -- **Utilization factor and aspect ratio** </p>
+1.Define Width and Height of Core and Die </p>
+- Assume the width and height as 1 sq unit and 1 sq unit each . Then UF is 1 . </p>
+- Utilization factor = (Area occupied by netlist)/(Total area of core) </p>
+- Aspect Ratio = Height / Width </p>
+![Screenshot (133)](https://github.com/user-attachments/assets/1f55385b-2f3f-459e-92e0-a24b12cd54cf) </p>
+Netlist defines the connectivity between all the components . </p>
+- **Core** - It is a section of the chip where the fundamental logic of design is placed . </p>
+- **Die** - It consists of core,is a samll semiconductor material specimen on which the fundamental circuit is fabricated. </p>
+- In reality , 50-60% UF is achieved. </p>
+-When aspect ratio is 1 , chip is square sized. </p>
+##### D2_SK1_L2 -- **Concept of Pre-placed Cells** </p>
+![Screenshot (136)](https://github.com/user-attachments/assets/889ba322-5692-473c-88c9-02f1a5678ba9) </p>
+- Divide the circuit in some fashioned to reduce size
+  1. Cut-off
+  2. Extend IO Pins
+  3. Black Box the boxes </p>
+![Screenshot (137)](https://github.com/user-attachments/assets/787fd1dd-3d4e-473b-93a8-f4dfa9c0413b) </p>
+-The arrangement of these IPs is referred as **floorplanning**
+-These IPs have user defined locations and hence are placed in chip befor automated placement-and-routing and are called **pre-placed cells** </p>
+##### D2_SK1_L3 -- **Decoupling Capacitors** </p>
+- Responsibility of PS to supply VTG to transition capacitor from 0 to 1.But in reality , supply drops in physical wires due to resistance .</p>
+-Addition of decoupling capacitor in parallel with circuit . Every time the circuit switches, it draws current from Cd , whereas RL network is used to replenish the charge into Cd.
+![Screenshot (142)](https://github.com/user-attachments/assets/c1b1a4e1-73bf-48d3-b128-11f6bc33809f) </p>
+![Screenshot (143)](https://github.com/user-attachments/assets/e8cabe3e-6a14-4024-be9b-99c83741d327) </p>
+##### D2_SK1_L4 -- **Power Planning** </p>
+- Only one power supply . Consider circuit as black box.  </p>
+- To retain same signal from driver to load , PS is given.</p>
+- If ground bounce goes beyond noise margin , voltage drops </p>
+- the solution is **Multiple Power Supply** , if circuit needs current , it can tap from nearest power supply. </p>
+![Screenshot (148)](https://github.com/user-attachments/assets/0e02d9c6-d1e7-4603-bc3d-2881eb2b1dd8) </p>
+![Screenshot (149)](https://github.com/user-attachments/assets/10f5a73e-d639-4e40-9d89-3d036972feb8) </p>
+##### D2_SK1_L5 -- **Pin Placement and Logical Cell Placement Blockage** </p>
+The connectivity information between the gates is coded using VHDL/Verilog language and is called as 'Netlist'.
+![Screenshot (151)](https://github.com/user-attachments/assets/f0bb462e-49ef-45e0-b4bf-fba6287cf4df) </p>
+The frontend team who decides the netlist connectivity input and output and the backend team who done the pin placements. So according to the pin placements, we have to locate the preplaced blocks nearer to the inputs of the preplaced blocks. </p>
+![Screenshot (152)](https://github.com/user-attachments/assets/bd1aa354-5767-4609-8057-149901291f70) </p>
+##### D2_SK1_L6 -- **Steps to Run Floorplan using OpenLANE** </p>
+
+
+
+
+
 
 
