@@ -22,7 +22,7 @@ The chip is in the center. </p>
 3. **DIE** </p>
 -  die, in the context of integrated circuits, is a small block of semiconducting material on which a given functional circuit is fabricated. </p>
 4. **CORE** </p>
--  Processor cores can be a microcontroller, microprocessor (μP),[11] digital signal processor (DSP) or application-specific instruction set processor (ASIP) core </p>
+-  Processor cores can be a microcontroller, microprocessor (μP),digital signal processor (DSP) or application-specific instruction set processor (ASIP) core </p>
 5. **Foundary IPs** </p>
 - IPs are designed and are essential to design PLL , ADC and SRAM . </p>
 6. **Macros** </p>
