@@ -38,3 +38,13 @@ When a use any application , there are many functions and features that we encou
 - Operating System OS : The task of OS is to convert the general tasks and various I/O operations into high level language like C,C++ </p>
 - Compiler - Compiler converts the C/C++ code into instructions in the form of *.exe file </p>
 - Assembler - The job of assembler is to covert instructions tinto binary which is then fed to hardware and it generates the output. </p>
+#### D1_SK2 SOC Design and Openlane </p>
+##### D1_SKY_L1 **Introduction to all components of an open-source digital ASIC designV** </p>
+1. **RTL Design** </p>
+RTL design is a crucial step in the VLSI design flow, which involves the creation of electronic circuits using integrated circuits (ICs). It involves the specification of a digital circuit in terms of the flow of digital signals between hardware registers, and the logical operations performed on those signals. </p>
+2. **EDA Tools** </p>
+Electronic design automation (EDA), also referred to as electronic computer-aided design (ECAD), is a category of software tools for designing electronic systems such as integrated circuits and printed circuit boards. </p>
+3. **PDKs** </p>
+Process Design Kits are the interface between the Fabrication companies and the designers. They seperate the design from the technology. </p>
+4. **Google Skywater 130nm PDK** </p>
+The Google SkyWater 130nm PDK is an open-source Process Design Kit (PDK) provided by SkyWater Technology Foundry in collaboration with Google. </p>
