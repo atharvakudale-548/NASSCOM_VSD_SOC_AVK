@@ -229,19 +229,64 @@ Run the command </p>
 ##### D3_SK1_L4 -- **Static and Dynamic Simulation** </p>
 ![Screenshot (190)](https://github.com/user-attachments/assets/a8d9240d-e6c0-4b7c-8a1a-2e027454ba5f)</p>
 ##### D3_SK1_L5 -- **Lab steps to gitclone vsdstdcelldesign** </p>
-
+Commands :- </p>
+`cd Desktop/work/tools/openlane_working_dir/openlane` </p>
+`git clone https://github.com/nickson-jose/vsdstdcelldesign` </p>
+`cd vsdstdcelldesign` </p>
+`cp /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech` </p>
+`ls` </p>
+`magic -T sky130A.tech sky130_inv.mag &` </p>
+![Screenshot (304)](https://github.com/user-attachments/assets/0f1d0a6b-1cfc-4401-8b56-2067d68e219c) </p>
+![Screenshot (305)](https://github.com/user-attachments/assets/18fb4ddf-2678-4927-90f7-a2f88e879063) </p>
 #### D3_SK2 Inception of Layout CMOS fab process </p>
 ##### D3_SK2_L1 -- **Create Active Regions** </p>
+![Screenshot (193)](https://github.com/user-attachments/assets/cacb8a2f-2a2d-4851-a397-df92488ae039) </p>
+![Screenshot (198)](https://github.com/user-attachments/assets/d2a22b86-cc94-4c2c-aff1-6d207da3909e)</p>
 ##### D3_SK2_L2 -- **N- well and P-well** </p>
+![Screenshot (201)](https://github.com/user-attachments/assets/a1f241ac-8638-4de5-9e91-6ae66d3bcc80)</p>
+![Screenshot (204)](https://github.com/user-attachments/assets/5af7eab2-47f3-496e-9731-25f3f60fd66f)</p>
 ##### D3_SK2_L3 -- **Create Gate Terminal** </p>
+![Screenshot (211)](https://github.com/user-attachments/assets/a5ee421c-9f9c-446d-abe2-2e021e48e33f)</p>
 ##### D3_SK2_L4 -- **LDD Formation** </p>
+![Screenshot (214)](https://github.com/user-attachments/assets/01e0bc6d-5199-4b74-974d-b71f9b86b797)</p>
+![Screenshot (216)](https://github.com/user-attachments/assets/7a02984b-7ed2-487e-9f14-3e8e59ac402b)</p>
 ##### D3_SK2_L5 -- **Source and Drain** </p>
+![Screenshot (227)](https://github.com/user-attachments/assets/83e54f67-ae9d-410a-b65a-8c9eac4e80fc)</p>
 ##### D3_SK2_L6 -- **Local Interconnect** </p>
 ##### D3_SK2_L7 -- **Higher level metal formation** </p>
+![Screenshot (248)](https://github.com/user-attachments/assets/684e6576-eb79-4acf-996f-bc9fcc50af87)</p>
 ##### D3_SK2_L8 -- **Lab intro to SKY130 basic layers layout and LEP using inverter** </p>
 ##### D3_SK2_L9 -- **Lab steps to create std cell layout and extract spice netlist** </p>
-#### D3_SK3 SKY130 Tech File Labs </p>
-##### D3_SK3_L1**Lab steps to create final spice deck using SKY130 tech** </p>
-##### D3_SK3_L3**Magic tool options and DRC** </p>
-##### D3_SK3_L4**SKY130 pdks and steps to download labs** </p>
-##### D3_SK3_L5**Magic tool options and DRC** </p>
+`pwd` </p>
+`extract all` </p>
+`ext2spice cthresh 0 rthresh 0`</p>
+`ext2spice` </p>
+![Screenshot (306)](https://github.com/user-attachments/assets/eb66d23f-2a32-4a8d-9218-34ccd0384566)</p>
+-in terminal `openlane/vsdstdcelldesign/$ngspice sky130_inv.spice` </p>
+![Screenshot (307)](https://github.com/user-attachments/assets/2f44fffd-2ae5-4dd6-9107-fe361bb579c8)</p>
+`plot y vs time a` </p>
+Calculate rise time and fall time </p>
+`cd`</p>
+`wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz`</p>
+`tar xfz drc_tests.tgz`</p>
+`cd drc_tests`</p>
+`ls -al`</p>
+`gvim .magicrc`</p>
+`magic -d XR &`</p>
+- in tkcon window</p>
+`paint v2`</p>
+cif see VIA2`</p>
+![Screenshot (309)](https://github.com/user-attachments/assets/0cc90eab-0ccf-44a1-b62a-bde2cfa1443a)</p>
+![Screenshot (311)](https://github.com/user-attachments/assets/056843a7-f2e3-43cb-8b26-0beaedc8081e)</p>
+![Screenshot (312)](https://github.com/user-attachments/assets/704ecd98-d076-4e03-8061-ec29790a024f)</p>
+![Screenshot (313)](https://github.com/user-attachments/assets/78409976-e278-49b4-be82-343ce94cb3fa)</p>
+![Screenshot (314)](https://github.com/user-attachments/assets/246cd8a6-6156-4b8a-b14b-3d7a8e615852)</p>
+![Screenshot (315)](https://github.com/user-attachments/assets/d768c1e9-cf3e-4b8c-9cbb-18970c01de4e)</p>
+![Screenshot (317)](https://github.com/user-attachments/assets/87a6ee85-2059-4ced-ac3b-b986766041b0)</p>
+![Screenshot (320)](https://github.com/user-attachments/assets/e5c4befe-3df1-46ca-8e73-b75e7880b0fd)</p>
+![Screenshot (324)](https://github.com/user-attachments/assets/7d459b96-9b90-4031-a1ff-2f2bfbbf595c)</p>
+`in tkcon window` </p>
+`tech load sky130A.tech`</p>
+`drc style drc(full)`</p>
+`drc check`</p>
+`drc why`</p>
