@@ -75,7 +75,11 @@ The Google SkyWater 130nm PDK is an open-source Process Design Kit (PDK) provide
 - In efabless , the company has a SoC called Strive.They have various versions and contains several features. </p>
 ##### D1_SKY_L3 **OpenLANE ASIC Flow** </p>
 ![image](https://github.com/user-attachments/assets/2234c8c8-d865-4a5e-adec-fffc8d953858) </p>
-#### D1_SK3 EDA Tools </p>
-##### D1_SKY_L3 **OpenLANE Directory Structure** </p>
+#### D1_SK3 Get Familiar with Open Source EDA Tools </p>
+##### D1_SKY_L1 **OpenLANE Directory Structure** </p>
 Complete RTL2GDS withou manual interaction </p>
-
+- Undersatnding Linux Commands </p>
+1. `pwd `- The pwd command writes to standard output the full path name of your current directory (from the root directory). </p>
+2. `cd` - Change directory </p>
+3. `ls -ltr` - It lists everything in the folder in chronological order. </p>
+##### D1_SKY_L2 **Design Preperation Step** </p>
