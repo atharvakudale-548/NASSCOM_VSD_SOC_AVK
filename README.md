@@ -83,3 +83,17 @@ Complete RTL2GDS withou manual interaction </p>
 2. `cd` - Change directory </p>
 3. `ls -ltr` - It lists everything in the folder in chronological order. </p>
 ##### D1_SKY_L2 **Design Preperation Step** </p>
+- Lab for running synthesis </p>
+`cd Desktop` </p>
+`cd work/tools/openlane_working_dir' </p>
+`cd openlane` </p>
+`docker` </p>
+`./flow.tcl -interactive` </p>
+`package require openlane 0.9` </p>
+`prep -design picorv32a` </p>
+`run_synthesis` </p>
+![Screenshot (127)](https://github.com/user-attachments/assets/4bbe524e-a45c-4e9e-9823-a845e170c8b4) </p>
+![Screenshot (128)](https://github.com/user-attachments/assets/5c2798ba-dbeb-4e81-8433-5ad5c554f7e9) </p>
+![Screenshot (130)](https://github.com/user-attachments/assets/21ced0a8-03fd-407d-9961-a68a5b9e2f1a) </p>
+
+
