@@ -290,3 +290,41 @@ Calculate rise time and fall time </p>
 `drc style drc(full)`</p>
 `drc check`</p>
 `drc why`</p>
+**Day 4 Labs** </p>
+![Screenshot (325)](https://github.com/user-attachments/assets/52f17183-c0ce-44e9-832c-6c54a789f92b) </p>
+![Screenshot (326)](https://github.com/user-attachments/assets/c87cf20f-a2d8-4aed-a345-b5db69963b2e)</p>
+![Screenshot (327)](https://github.com/user-attachments/assets/4041ae97-3824-43cd-9452-224458e34ef4)</p>
+![Screenshot (328)](https://github.com/user-attachments/assets/61ef920e-855d-4261-93aa-881a90ec4989)</p>
+![Screenshot (329)](https://github.com/user-attachments/assets/c9290aae-78d9-4532-b429-2fcf53a23ebe)</p>
+![Screenshot (330)](https://github.com/user-attachments/assets/a34ba55d-3c66-48f2-9804-23a9ea963536)</p>
+![Screenshot (331)](https://github.com/user-attachments/assets/da8a721b-d939-4a53-a4f2-b205e95b5dd8)</p>
+![Screenshot (332)](https://github.com/user-attachments/assets/af7074db-9a5c-4dae-a673-44f33e0337fe)</p>
+![Screenshot (333)](https://github.com/user-attachments/assets/981936c1-eb44-472b-b61e-e2e43cd6e7f4)</p>
+![Screenshot (334)](https://github.com/user-attachments/assets/ce7ba30a-7f8d-4a6e-a313-c369a87553b9)</p>
+![Screenshot (337)](https://github.com/user-attachments/assets/92c6ac28-c5de-4c23-9473-3844e4297a72)</p>
+![Screenshot (338)](https://github.com/user-attachments/assets/2629f49f-c5a1-4d75-b8a8-209fa8f326c2)</p>
+![Screenshot (340)](https://github.com/user-attachments/assets/f9c39a09-00fb-4b75-b965-77e5166041b3)</p>
+![Screenshot (341)](https://github.com/user-attachments/assets/a50c8dd4-c808-4345-b28a-d767c2e3f421)</p>
+![Screenshot (342)](https://github.com/user-attachments/assets/56409fa7-3fb3-4d44-8a98-083cf8b07a2f)</p>
+![Screenshot (343)](https://github.com/user-attachments/assets/30213ac0-e44d-4584-b790-128344f9738a)</p>
+![Screenshot (346)](https://github.com/user-attachments/assets/623e53a3-40d7-4e5e-9800-6a19b44d43d8)</p>
+![Screenshot (347)](https://github.com/user-attachments/assets/0a27f73c-2958-4b06-a092-fb67735dcefe)</p>
+![Screenshot (348)](https://github.com/user-attachments/assets/602cb1c1-8eba-4227-90f4-6a1deb8a2b01)</p>
+![Screenshot (349)](https://github.com/user-attachments/assets/2b9d04cf-8773-4b72-aa04-8531c5ff6b96)</p>
+![Screenshot (350)](https://github.com/user-attachments/assets/ae5e9a05-babe-410d-95e0-24400ea34296)</p>
+![Screenshot (352)](https://github.com/user-attachments/assets/6bbfc932-9e40-43e5-b20a-c1d6da2a7b5d)</p>
+![Screenshot (353)](https://github.com/user-attachments/assets/fd9920c9-d758-437f-a4a5-667c06feceb6)</p>
+![Screenshot (355)](https://github.com/user-attachments/assets/4519bd1f-4dd0-40f8-b32a-69b66a4e2c07)</p>
+![Screenshot (357)](https://github.com/user-attachments/assets/27fbe0a4-5866-41d9-afd2-e7e269ec8bbd)</p>
+
+
+
+
+
+
+
+
+
+
+
+
