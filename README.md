@@ -290,9 +290,9 @@ Calculate rise time and fall time </p>
 `drc style drc(full)`</p>
 `drc check`</p>
 `drc why`</p>
-####Day 4 : Pre - layout timing analysis and importance of good clock tree</p>
-#####D4_SK2 : **Setup Timing Analysis and Flip Flop Setup Time**</p>
-#####D4_SK2_L1 : **Ideal clock**</p>
+#### Day 4 : Pre - layout timing analysis and importance of good clock tree</p>
+##### D4_SK2 : **Setup Timing Analysis and Flip Flop Setup Time**</p>
+##### D4_SK2_L1 : **Ideal clock**</p>
 -Ideal clock where clock tree is not build.
 -Consider two D FlipFlops Launch and Capture
 Clock signal is sent as 0 to Launch FF and clock signal T is sent to capture FF.
@@ -300,7 +300,7 @@ But there is some combinational delay .
 ![Screenshot (253)](https://github.com/user-attachments/assets/02a6ce2f-4375-4c25-9b06-f8bec0f17469)</p>
 ![Screenshot (257)](https://github.com/user-attachments/assets/7aebb6ed-d3b2-45ec-89cb-a3c32831aeb7)</p>
 ![Screenshot (258)](https://github.com/user-attachments/assets/060cbf91-03e6-4659-87b2-c8f4bdfc5e48)</p>
-#####D4_SK2_L2 : **Clock jitter and uncertainty**</p>
+##### D4_SK2_L2 : **Clock jitter and uncertainty**</p>
 Clock source is expected to send clock at t=0 and t=2t and so on.</p>
 But the PLL i.e the clock source is also based on some kind of circuity like MOSFETS,etc.</p>
 Clock edge may not be at 0 i.e they can be before or after 0)</p>
@@ -309,21 +309,21 @@ Uncertainty: It specifies a window within which a clock edge can occur. In physi
 Setup Uncertainty:</p>
 
 Pre-Cts = Jitter + Skew + Extra setup margin</p>
-#####D4_SK3 : **Clock Tree Synthesis TRritonCTS and signal integrity**</p>
-####D4_SK3_L1 : **Clock tree routing and buffering using H-tree alogorithm**</p>
+##### D4_SK3 : **Clock Tree Synthesis TRritonCTS and signal integrity**</p>
+#### D4_SK3_L1 : **Clock tree routing and buffering using H-tree alogorithm**</p>
 T1-T2=skew</p>
 H-tree - It takes the clock out and takes the midpoint between two elements and then connect(almost at same time) i.e 0 skew.</p>
 Buffer will have equal fall and rise time.</p>
 Clock waveform will be faithfully reproduced.</p>
 ![Screenshot (262)](https://github.com/user-attachments/assets/153a9bd1-1430-4abb-a640-54ca750216de)</p>
 ![Screenshot (264)](https://github.com/user-attachments/assets/1f348d6e-9afc-4494-beef-0bbe4d8c248d)</p>
-####D4_SK3_L2 : **Cross talk and cross net shielding**</p>
+#### D4_SK3_L2 : **Cross talk and cross net shielding**</p>
 The purpose is to protect clock net from outside.</p>
 **Glitch** - When switching activity happens at aggressor and Cc is strong , it will directly impact the net shield.</p>
 Crosstalk glitch will be safe or unsafe depending on the height of the crosstalk glitch and the logic pin from which the victim net is connected.</p>
 To prevent other signals fron entering the elements , proper net shielding is done .</p>
 ![Screenshot (265)](https://github.com/user-attachments/assets/f1e77a74-1d92-4fd8-9667-00bc587451db)</p>
-####D4_SK3_L4 : **Timing analysis with real clocks using OpenSTA**</p>
+#### D4_SK3_L4 : **Timing analysis with real clocks using OpenSTA**</p>
 ![Screenshot (269)](https://github.com/user-attachments/assets/f7e816df-0d0c-4a7b-ab0b-56b907ed9696)</p>
 ![Screenshot (271)](https://github.com/user-attachments/assets/e8887aa3-5f6e-4923-bf6d-a6cb1184d5ea)</p>
 **Day 4 Labs** </p>
