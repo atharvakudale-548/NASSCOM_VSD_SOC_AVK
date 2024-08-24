@@ -290,21 +290,89 @@ Calculate rise time and fall time </p>
 `drc style drc(full)`</p>
 `drc check`</p>
 `drc why`</p>
+####Day 4 : Pre - layout timing analysis and importance of good clock tree</p>
+#####D4_SK2 : **Setup Timing Analysis and Flip Flop Setup Time**</p>
+#####D4_SK2_L1 : **Ideal clock**</p>
+-Ideal clock where clock tree is not build.
+-Consider two D FlipFlops Launch and Capture
+Clock signal is sent as 0 to Launch FF and clock signal T is sent to capture FF.
+But there is some combinational delay .
+![Screenshot (253)](https://github.com/user-attachments/assets/02a6ce2f-4375-4c25-9b06-f8bec0f17469)</p>
+![Screenshot (257)](https://github.com/user-attachments/assets/7aebb6ed-d3b2-45ec-89cb-a3c32831aeb7)</p>
+![Screenshot (258)](https://github.com/user-attachments/assets/060cbf91-03e6-4659-87b2-c8f4bdfc5e48)</p>
+#####D4_SK2_L2 : **Clock jitter and uncertainty**</p>
+Clock source is expected to send clock at t=0 and t=2t and so on.</p>
+But the PLL i.e the clock source is also based on some kind of circuity like MOSFETS,etc.</p>
+Clock edge may not be at 0 i.e they can be before or after 0)</p>
+Clock jitter is typically caused by clock generator circuitry, noise, power supply variations, interference from nearby circuitry etc. Jitter is a contributing factor to the design margin specified for timing closure.</p>
+Uncertainty: It specifies a window within which a clock edge can occur. In physical design uncertainty will be used to model several factors like jitter (the deviation of clock edge from its ideal position), additional margins and skew (at pre-cts).</p>
+Setup Uncertainty:</p>
+
+Pre-Cts = Jitter + Skew + Extra setup margin</p>
+#####D4_SK3 : **Clock Tree Synthesis TRritonCTS and signal integrity**</p>
+####D4_SK3_L1 : **Clock tree routing and buffering using H-tree alogorithm**</p>
+T1-T2=skew</p>
+H-tree - It takes the clock out and takes the midpoint between two elements and then connect(almost at same time) i.e 0 skew.</p>
+Buffer will have equal fall and rise time.</p>
+Clock waveform will be faithfully reproduced.</p>
+![Screenshot (262)](https://github.com/user-attachments/assets/153a9bd1-1430-4abb-a640-54ca750216de)</p>
+![Screenshot (264)](https://github.com/user-attachments/assets/1f348d6e-9afc-4494-beef-0bbe4d8c248d)</p>
+####D4_SK3_L2 : **Cross talk and cross net shielding**</p>
+The purpose is to protect clock net from outside.</p>
+**Glitch** - When switching activity happens at aggressor and Cc is strong , it will directly impact the net shield.</p>
+Crosstalk glitch will be safe or unsafe depending on the height of the crosstalk glitch and the logic pin from which the victim net is connected.</p>
+To prevent other signals fron entering the elements , proper net shielding is done .</p>
+![Screenshot (265)](https://github.com/user-attachments/assets/f1e77a74-1d92-4fd8-9667-00bc587451db)</p>
+####D4_SK3_L4 : **Timing analysis with real clocks using OpenSTA**</p>
+![Screenshot (269)](https://github.com/user-attachments/assets/f7e816df-0d0c-4a7b-ab0b-56b907ed9696)</p>
+![Screenshot (271)](https://github.com/user-attachments/assets/e8887aa3-5f6e-4923-bf6d-a6cb1184d5ea)</p>
 **Day 4 Labs** </p>
+`cd Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign`</p>
+`magic -T sky130A.tech sky130_inv.mag &`</p>
+In tkcon window</p>
+`grid 0.46um 0.34um 0.23um 0.17um`</p>
 ![Screenshot (325)](https://github.com/user-attachments/assets/52f17183-c0ce-44e9-832c-6c54a789f92b) </p>
+`save sky130_vsdinv.mag`</p>
+`magic -T sky130A.tech sky130_vsdinv.mag &`</p>
 ![Screenshot (326)](https://github.com/user-attachments/assets/c87cf20f-a2d8-4aed-a345-b5db69963b2e)</p>
+`lef_write`</p>
 ![Screenshot (327)](https://github.com/user-attachments/assets/4041ae97-3824-43cd-9452-224458e34ef4)</p>
 ![Screenshot (328)](https://github.com/user-attachments/assets/61ef920e-855d-4261-93aa-881a90ec4989)</p>
 ![Screenshot (329)](https://github.com/user-attachments/assets/c9290aae-78d9-4532-b429-2fcf53a23ebe)</p>
 ![Screenshot (330)](https://github.com/user-attachments/assets/a34ba55d-3c66-48f2-9804-23a9ea963536)</p>
 ![Screenshot (331)](https://github.com/user-attachments/assets/da8a721b-d939-4a53-a4f2-b205e95b5dd8)</p>
 ![Screenshot (332)](https://github.com/user-attachments/assets/af7074db-9a5c-4dae-a673-44f33e0337fe)</p>
+`set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"`</p>
+`set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib"`</p>
+`set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib"`</p>
+`set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"`</p>
+
+`set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]`</p>
 ![Screenshot (333)](https://github.com/user-attachments/assets/981936c1-eb44-472b-b61e-e2e43cd6e7f4)</p>
+`prep -design picorv32a -tag 29-07_10-25 -overwrite`</p>
 ![Screenshot (334)](https://github.com/user-attachments/assets/ce7ba30a-7f8d-4a6e-a313-c369a87553b9)</p>
+`cd Desktop/work/tools/openlane_working_dir/openlane`</p>
+`docker`</p>
+`./flow.tcl -interactive`</p>
+`package require openlane 0.9`</p>
+`prep -design picorv32a -tag 29-07_10-25 -overwrite`</p> 
+`set lefs [glob $::env(DESIGN_DIR)/src/*.lef]`</p>
+`add_lefs -src $lefs`</p>
+`echo $::env(SYNTH_STRATEGY)`</p>
+`set ::env(SYNTH_STRATEGY) 1`</p>
+`echo $::env(SYNTH_BUFFERING)`</p>
+`echo $::env(SYNTH_SIZING)`</p>
+`set ::env(SYNTH_SIZING) 1`</p>
+`echo $::env(SYNTH_DRIVING_CELL)`</p>
+`run_synthesis`</p>
+`run_floorplan`</p>
+`run_placement`</p>
 ![Screenshot (337)](https://github.com/user-attachments/assets/92c6ac28-c5de-4c23-9473-3844e4297a72)</p>
 ![Screenshot (338)](https://github.com/user-attachments/assets/2629f49f-c5a1-4d75-b8a8-209fa8f326c2)</p>
+`cd openlane/designs/picorv32a/runs/29-07_10-25/results/placement/`</p>
 ![Screenshot (340)](https://github.com/user-attachments/assets/f9c39a09-00fb-4b75-b965-77e5166041b3)</p>
 ![Screenshot (341)](https://github.com/user-attachments/assets/a50c8dd4-c808-4345-b28a-d767c2e3f421)</p>
+`run_synthesis`</p>
 ![Screenshot (342)](https://github.com/user-attachments/assets/56409fa7-3fb3-4d44-8a98-083cf8b07a2f)</p>
 ![Screenshot (343)](https://github.com/user-attachments/assets/30213ac0-e44d-4584-b790-128344f9738a)</p>
 ![Screenshot (346)](https://github.com/user-attachments/assets/623e53a3-40d7-4e5e-9800-6a19b44d43d8)</p>
