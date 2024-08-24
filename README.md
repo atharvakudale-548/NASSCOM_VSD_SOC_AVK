@@ -316,15 +316,82 @@ Calculate rise time and fall time </p>
 ![Screenshot (353)](https://github.com/user-attachments/assets/fd9920c9-d758-437f-a4a5-667c06feceb6)</p>
 ![Screenshot (355)](https://github.com/user-attachments/assets/4519bd1f-4dd0-40f8-b32a-69b66a4e2c07)</p>
 ![Screenshot (357)](https://github.com/user-attachments/assets/27fbe0a4-5866-41d9-afd2-e7e269ec8bbd)</p>
+### **Day 5 : Final steps for RTL2GDS using Tritronroute and openSTA **</p>
+#### D5_SK1 Routing and DRC </p>
+##### D5_SK1_L1 -- **Maze Routing - Lee's Algorithm** </p>
+Routing:It is finding the best shortest possible connection between two end points with one point being the source and other point being the target and with less number of twist and turns. </p>
+Maze-Routing(Lee's Algorithm): These should not be zig-zag lines of connections most of the connections should be in L shape or in Z shape. So according to algorithm first it create some grids and grids are routing at the backend. It's called as routing grid. There are some numbers of grids on this routig having some dimensions. SO here we are having two points one is 'Source' and the other is 'Target'. With the help of this routing grid algorithm has to find out the best possible way between them. </p>
+Steps - </p>
+1. Create a routing grid</p>
+2. Assign and Source and a target</p>
+3. Label as 1 to the adjacent grid</p>
+4. then label as 2 to the grid adjacent to 1 and so on.</p>
+![Screenshot (272)](https://github.com/user-attachments/assets/f81ef886-3143-414b-b896-a35a32a0d31d)</p>
+##### D5_SK1_L2 -- **Conclusion to Maze Routing** </p>
+Route with L shaped is preferred </p>
+##### D5_SK1_L3 -- **Design Rule Check (DRC)** </p>
+Design Rule Checking (DRC) verifies as to whether a specific design meets the constraints imposed by the process technology to be used for its manufacturing. DRC checking is an essential part of the physical design flow and ensures the design meets manufacturing requirements and will not result in a chip failure. </p>
+Rules - 
+1. Wire Width - Width of the wire should be minimum that derived from the optical wavelenth of lithography technique applied.</p>
+![Screenshot (273)](https://github.com/user-attachments/assets/4f00b4b2-259c-4be9-890d-c19dee23644a)</p>
+2.Wire Pitch - The minimum spacing between the center of two wires is requires.</p>
+![Screenshot (274)](https://github.com/user-attachments/assets/a99fca30-fdae-4bae-a26e-167b2132c00f)</p>
+3.Wire Spacing - Minimum space between two wires.</p>
+![Screenshot (275)](https://github.com/user-attachments/assets/8c1d75d1-d221-4e8a-8d22-18536647dc5a)</p>
+When two wires have single point of contact , this is called Signal Short .</p>
+The solution to this DRC violation is applying another metal layer of higher width above it.</p>
+#### D5_SK2 Power Distribution Network and Routing </p>
+##### D5_SK2_L1 -- **Lab steps to build power distribution network** </p>
+`cd Desktop/work/tools/openlane_working_dir/openlane`</p>
+`docker`</p>
+`./flow.tcl -interactive`</p>
+`package require openlane 0.9`</p>
+`prep -design picorv32a`</p>
+`set lefs [glob $::env(DESIGN_DIR)/src/*.lef]`</p>
+`add_lefs -src $lefs`</p>
+`set ::env(SYNTH_STRATEGY) "DELAY 3"`</p>
+`set ::env(SYNTH_SIZING) 1`</p>
+`run_synthesis`</p>
+`run_floorplan`</p>
+`run_placement`</p>
+`run_cts`</p>
+`gen_pdn`</p>
+![Screenshot (359)](https://github.com/user-attachments/assets/6838a98d-31df-4232-ad57-6216245bf080)</p>
+Height of standard cell should be 2.72 or multiples of 2.72.</p>
+Straps are required for power in chip</p>
+![Screenshot (360)](https://github.com/user-attachments/assets/25c5d2f4-077e-4284-ad06-0c812830ce74)</p>
+![Screenshot (361)](https://github.com/user-attachments/assets/7cd9be62-e617-4871-bb03-0bdc61021232)</p>
+##### D5_SK2_L2 -- **Power straps to standard cell power** </p>
+- 'X' denotes connecttivity pads to the ring.</p>
+- straps are used for reaching power from the ring to the chip</p>
+![Screenshot (280)](https://github.com/user-attachments/assets/4bb0565d-dea2-4353-8ec6-0bdf6c945b7c)</p>
+`echo $::env(CURRENT_DEF)`</p>
+##### D5_SK2_L3 -- **Global and Detail Routing and Configuration of TritonRoute** </p>
+`run_routing`</p>
+In terminal</p>
+`cd configuration/`</p>
+`less README.md`</p>
 
+`echo $::env(ROUTING_STRATEGY)`</p>
+`run_routing`</p></p>
 
-
-
-
-
-
-
-
-
-
-
+By using ROUTING_STRATEGY , it specifies the optimization.</p>
+![Screenshot (363)](https://github.com/user-attachments/assets/65e0dfb9-026a-43fb-a1a1-04da7df557b9)</p>
+**Fast Routing** - Create a routing guide</p>
+**Detail Routing** - Use algorithm for finding the best connectivity amaongst the points.</p>
+![Screenshot (282)](https://github.com/user-attachments/assets/709d07d9-74c8-452f-b913-86d2e2da632b)</p>
+#### D5_SK3 TritonRoute Features </p>
+##### D5_SK3_L1 -- **Honors pre-processsed route guides** </p>
+![Screenshot (284)](https://github.com/user-attachments/assets/0e2d1fbc-e302-4338-8a8a-0972eae93508)</p>
+Here , preprocessed routes are used for enhancing the efficiency.</p>
+##### D5_SK3_L2 -- **Inter guide connectivity and inter layer routing** </p>
+![Screenshot (285)](https://github.com/user-attachments/assets/af4c0490-f3a9-439b-bc96-bc3aad133615)</p>
+![Screenshot (287)](https://github.com/user-attachments/assets/349dc2dc-850c-4beb-b6f8-365eb61ba2c0)</p>
+Connections between different routing guides is done.</p>
+##### D5_SK3_L3 -- **TritonRoute method to handle connectivity** </p>
+![Screenshot (289)](https://github.com/user-attachments/assets/d028187f-f415-4e20-9cc4-4f69c8967545)</p>
+##### D5_SK3_L4 -- **Routing Topolgy Algorithm and Post Route** </p>
+![Screenshot (290)](https://github.com/user-attachments/assets/430d2203-674f-429f-8ed6-d35d20e2c5d2)</p>
+For each Access Point Cluster (APC) , find the COST</p>
+Uses the method of Minimum Spanning Tree(MST).</p>
+SPEF_EXTRACTOR</p>
